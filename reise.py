@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import datetime
 
 
 class Reise:
@@ -8,12 +8,10 @@ class Reise:
         self.storno_algorithmus = None
 
     def preis_berechnen(self):
-        raise NotImplementedError
+        pass
 
     def tage_bestimmen(self):
-        heute = datetime.now()
-        differenz = self.reise_beginn - heute
-        return differenz.days
+        pass
 
     def set_storno_algorithmus(self, alg):
         self.storno_algorithmus = alg

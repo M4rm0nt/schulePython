@@ -1,6 +1,6 @@
 class StornoAlgorithmus:
     def storno_berechnen(self, reise):
-        raise NotImplementedError
+        pass
 
 
 class KulanterStornoAlgorithmus(StornoAlgorithmus):
