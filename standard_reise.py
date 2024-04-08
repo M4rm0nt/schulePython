@@ -8,4 +8,4 @@ class StandardReise(Reise):
         self.set_storno_algorithmus(KulanterStornoAlgorithmus())
 
     def preis_berechnen(self):
-        return self.grund_preis
+        pass

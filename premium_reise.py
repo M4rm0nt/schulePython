@@ -6,4 +6,4 @@ class PremiumReise(Reise):
         super().__init__(reise_beginn, grund_preis)
 
     def preis_berechnen(self):
-        return self.grund_preis * 1.2
+        pass

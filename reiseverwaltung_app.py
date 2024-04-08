@@ -6,8 +6,10 @@ from storno_algorithmen import StrengerStornoAlgorithmus
 
 
 def main():
+
     reise_datum = (datetime.now() + timedelta(days=30)).strftime('%d.%m.%Y')
 
+    # KulanterStornoAlgorithmus
     premium_reiseKA = PremiumReise(reise_datum, 1000.0)
     premium_reiseKA.set_storno_algorithmus(KulanterStornoAlgorithmus())
     stornogebuehrPRSA = premium_reiseKA.execute_storno_berechnen()
@@ -18,6 +20,7 @@ def main():
     stornogebuehrSRKA = standart_reiseKA.execute_storno_berechnen()
     print(f"Die Stornogebühr für die StandartReise am {reise_datum} mit KA beträgt: {stornogebuehrSRKA}")
 
+    # StrengerStornoAlgorithmus
     premium_reiseSA = PremiumReise(reise_datum, 1000.0)
     premium_reiseSA.set_storno_algorithmus(StrengerStornoAlgorithmus())
     stornogebuehrPRSA = premium_reiseSA.execute_storno_berechnen()
